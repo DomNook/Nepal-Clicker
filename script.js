@@ -124,8 +124,8 @@ function buyBigman() {
             document.getElementById("bigman").innerHTML = bigman;
             document.getElementById("money").innerHTML = cash;
             document.getElementById("bigmancost").innerHTML = bigmancost;
-            //add call to victory screen here
-            alert("you won")
+            
+            Victory()
         }
         else {
             cash = cash - bigmancost;
@@ -158,3 +158,15 @@ setInterval(function() {
     cashpersec = wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100);
     document.getElementById("cashpsec").innerHTML = cashpersec;
 }, 1000); // 1000 = 1 sec
+
+//victory screen
+
+function Victory() {
+    var freeplaypopup = document.getElementById("win");
+    freeplaypopup.classList.toggle("show");
+}
+
+function FreePlay() {
+    var freeplaypopup = document.getElementById("win");
+    freeplaypopup.classList.toggle("show");
+}

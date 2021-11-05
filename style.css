@@ -34,3 +34,33 @@ body {
     flex-direction: column;
     float: right;
 }
+
+/* victory popup */
+.centerpopup {
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+.victory {
+    padding: 35px;
+    visibility: hidden;
+    background-color: grey;
+    text-align: center;
+}
+
+.freeplaybutton {
+    margin-top: 25px;
+    background-color: red;
+    width: 200px;
+    height: 85px;
+}
+
+.centerpopup .show {
+ visibility: visible;
+}
+
+.centerpopup .hide {
+ visibility: hidden;
+}
