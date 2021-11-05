@@ -1,6 +1,7 @@
 body {
     background-color: darkcyan;
-    margin: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 #moneybutton {
@@ -16,6 +17,7 @@ body {
 
 .center {
     text-align: center;
+    width: 100%;
 }
 
 #buybutton {
@@ -26,28 +28,34 @@ body {
 
 .worker {
     float: right;
-    margin: 15px;
+    margin: 0px;
 }
 
 .workercontainer {
     display: flex;
     flex-direction: column;
     float: right;
+    margin-right: 20px;
 }
 
 /* victory popup */
 .centerpopup {
+    pointer-events: none;
     text-align: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 500px;
 }
 
 .victory {
-    padding: 35px;
     visibility: hidden;
     background-color: grey;
     text-align: center;
+    height: 500px;
+    padding-top: 100px;
 }
 
 .freeplaybutton {
@@ -55,12 +63,16 @@ body {
     background-color: red;
     width: 200px;
     height: 85px;
+    cursor: pointer;
+    margin-bottom: 25px;
 }
 
 .centerpopup .show {
  visibility: visible;
+ pointer-events: all;
 }
 
 .centerpopup .hide {
  visibility: hidden;
+ pointer-events: none;
 }
