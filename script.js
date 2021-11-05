@@ -1,15 +1,32 @@
 var cash = 0;
+
 document.getElementById("money").innerHTML = cash;
-document.getElementById("moneybutton").addEventListener("click", earncash);
+
 
 
 //button for cash
-function earncash() {
-    cash += 1;
-    console.log(cash);
+function earncash(amount) {
+    cash = cash + amount;
     document.getElementById("money").innerHTML = cash;
 }
 
+
+//hardware upgrade
+var clickpower = 1;
+var hardupgradecost = 50
+
+document.getElementById("hardcost").innerHTML = hardupgradecost;
+
+function upgradehard() {
+    if (cash >= hardupgradecost) {
+        cash = cash - hardupgradecost;
+        clickpower += 1;
+        hardupgradecost = Math.round(hardupgradecost * 1.75);
+
+        document.getElementById("money").innerHTML = cash;
+        document.getElementById("hardcost").innerHTML = hardupgradecost;
+    }
+}
 
 
 //wifi antennas

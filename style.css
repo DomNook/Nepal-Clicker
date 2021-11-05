@@ -38,6 +38,15 @@ body {
     margin-right: 20px;
 }
 
+.purchasecontainer {
+    width: auto;
+}
+
+.upgrades {
+    margin-left: 20px;
+    float: left;
+}
+
 /* victory popup */
 .centerpopup {
     pointer-events: none;
