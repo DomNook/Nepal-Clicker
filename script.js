@@ -116,7 +116,7 @@ document.getElementById("bigmancost").innerHTML = bigmancost;
 
 function buyBigman() {
     if (cash >= bigmancost) {
-        if (bigman = 9) {
+        if (bigman == 9) {
             cash = cash - bigmancost;
             bigman += 1;
             bigmancost = Math.round(bigmancost * 1.15);
@@ -125,6 +125,7 @@ function buyBigman() {
             document.getElementById("money").innerHTML = cash;
             document.getElementById("bigmancost").innerHTML = bigmancost;
             //add call to victory screen here
+            alert("you won")
         }
         else {
             cash = cash - bigmancost;
