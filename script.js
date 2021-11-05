@@ -116,13 +116,26 @@ document.getElementById("bigmancost").innerHTML = bigmancost;
 
 function buyBigman() {
     if (cash >= bigmancost) {
-        cash = cash - bigmancost;
-        bigman += 1;
-        bigmancost = Math.round(bigmancost * 1.15);
+        if (bigman = 9) {
+            cash = cash - bigmancost;
+            bigman += 1;
+            bigmancost = Math.round(bigmancost * 1.15);
+    
+            document.getElementById("bigman").innerHTML = bigman;
+            document.getElementById("money").innerHTML = cash;
+            document.getElementById("bigmancost").innerHTML = bigmancost;
+            //add call to victory screen here
+        }
+        else {
+            cash = cash - bigmancost;
+            bigman += 1;
+            bigmancost = Math.round(bigmancost * 1.15);
+    
+            document.getElementById("bigman").innerHTML = bigman;
+            document.getElementById("money").innerHTML = cash;
+            document.getElementById("bigmancost").innerHTML = bigmancost;
+        }
 
-        document.getElementById("bigman").innerHTML = bigman;
-        document.getElementById("money").innerHTML = cash;
-        document.getElementById("bigmancost").innerHTML = bigmancost;
     }
 }
 
