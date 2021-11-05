@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nepal Clicker</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+
+    <body>
+        <div class="center">
+            <h1>Nepal Clicker</h1>
+            <br>
+            <p>You have <span id="money"></span> Nepalese rupee</p>
+            <p>Click to earn money</p>
+            <button id="moneybutton"><img id="rupee" src="./rupee.png"></button>
+            <br><br>
+            <p>Your buildings and workers are earning you <span id="cashpsec"></span> Nepalese rupee per second</p>
+        </div>
+        <br><br><br><br>
+        <div class="workercontainer">
+        <p class="worker">You currently own <span id="wifi"></span> Wi-Fi Antennas | Cost: [<span id="wificost"></span>] <button onclick="buyWifi()" id="buybutton">Buy</button></p>
+        <p class="worker">You currently own <span id="trade"></span> Trading websites | Cost: [<span id="tradecost"></span>] <button onclick="buyTrade()" id="buybutton">Buy</button></p>
+        <p class="worker">You currently own <span id="laptop"></span> Laptops for Children | Cost: [<span id="laptopcost"></span>] <button onclick="buyLaptop()" id="buybutton">Buy</button></p>
+        <p class="worker">You currently own <span id="telemed"></span> Telemedicine Doctors | Cost: [<span id="telemedcost"></span>] <button id="buybutton">Buy</button></p>
+        <p class="worker">You currently own <span id="envsur"></span> Environmental surveillance | Cost: [<span id="envsurcost"></span>] <button id="buybutton">Buy</button></p>
+        <p class="worker">You currently own <span id="bigman"></span> Øystein Sæbøs | Cost: [<span id="bigmancost"></span>] <button id="buybutton">Buy</button></p>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

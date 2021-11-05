@@ -1,0 +1,36 @@
+body {
+    background-color: darkcyan;
+    margin: none;
+}
+
+#moneybutton {
+    border: none;
+    background-color: darkcyan;
+}
+
+#rupee {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+#buybutton {
+    background-color: cornflowerblue;
+    color: black;
+    cursor: pointer;
+}
+
+.worker {
+    float: right;
+    margin: 15px;
+}
+
+.workercontainer {
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
