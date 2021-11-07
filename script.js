@@ -232,7 +232,7 @@ function SaveGame() {
 //loading
 
 function LoadGame() {
-    var SavedGame= JSON.parse(localStorage.getItem(GameSave));
+    var SavedGame= JSON.parse(localStorage.getItem("GameSave"));
     if (typeof SavedGame.cash !== "undefined") cash = SavedGame.cash;
     if (typeof SavedGame.clickpower !== "undefined") clickpower = SavedGame.clickpower;
     if (typeof SavedGame.hardupgradecost !== "undefined") hardupgradecost = SavedGame.hardupgradecost;
