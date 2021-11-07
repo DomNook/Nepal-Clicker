@@ -15,6 +15,7 @@ function earncash(amount) {
 var clickpower = 1;
 var hardupgradecost = 50
 
+document.getElementById("clickindicator").innerHTML = clickpower;
 document.getElementById("hardcost").innerHTML = hardupgradecost;
 
 function upgradehard() {
@@ -25,8 +26,11 @@ function upgradehard() {
 
         document.getElementById("money").innerHTML = cash;
         document.getElementById("hardcost").innerHTML = hardupgradecost;
+        document.getElementById("clickindicator").innerHTML = clickpower;
     }
 }
+
+
 
 
 //wifi antennas
@@ -45,6 +49,7 @@ function buyWifi() {
         document.getElementById("wifi").innerHTML = wifi;
         document.getElementById("money").innerHTML = cash;
         document.getElementById("wificost").innerHTML = wificost;
+        cashpersec();
     }
 }
 
@@ -64,6 +69,7 @@ function buyTrade () {
         document.getElementById("trade").innerHTML = trade;
         document.getElementById("money").innerHTML = cash;
         document.getElementById("tradecost").innerHTML = tradecost;
+        cashpersec();
     }
 }
 
@@ -83,6 +89,7 @@ function buyLaptop() {
         document.getElementById("laptop").innerHTML = laptop;
         document.getElementById("money").innerHTML = cash;
         document.getElementById("laptopcost").innerHTML = laptopcost;
+        cashpersec();
     }
 }
 
@@ -102,6 +109,7 @@ function buyTelemed() {
         document.getElementById("telemed").innerHTML = telemed;
         document.getElementById("money").innerHTML = cash;
         document.getElementById("telemedcost").innerHTML = telemedcost;
+        cashpersec();
     }
 }
 
@@ -121,6 +129,7 @@ function buyEnvsur() {
         document.getElementById("envsur").innerHTML = envsur;
         document.getElementById("money").innerHTML = cash;
         document.getElementById("envsurcost").innerHTML = envsurcost;
+        cashpersec();
     }
 }
 
@@ -142,7 +151,9 @@ function buyBigman() {
             document.getElementById("money").innerHTML = cash;
             document.getElementById("bigmancost").innerHTML = bigmancost;
             
-            Victory()
+            cashpersec();
+
+            Victory();
         }
         else {
             cash = cash - bigmancost;
@@ -152,6 +163,7 @@ function buyBigman() {
             document.getElementById("bigman").innerHTML = bigman;
             document.getElementById("money").innerHTML = cash;
             document.getElementById("bigmancost").innerHTML = bigmancost;
+            cashpersec();
         }
 
     }
@@ -168,13 +180,13 @@ setInterval(function() {
 
 //display cps
 
-var cashpersec = 0;
-document.getElementById("cashpsec").innerHTML = cashpersec;
+var cashpersecond = 0;
+document.getElementById("cashpsec").innerHTML = cashpersecond;
 
-setInterval(function() {
-    cashpersec = wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100);
-    document.getElementById("cashpsec").innerHTML = cashpersec;
-}, 1000); // 1000 = 1 sec
+function cashpersec() {
+    cashpersecond = wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100);
+    document.getElementById("cashpsec").innerHTML = cashpersecond;
+}
 
 //victory screen
 
