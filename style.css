@@ -84,12 +84,14 @@ body {
 }
 
 .purchasecontainer {
-    width: auto;
+    width: 100%;
+    display: inline-block;
 }
 
 .upgrades {
     margin-left: 20px;
     float: left;
+    display: flex;
 }
 
 .upgrade {
@@ -106,6 +108,7 @@ body {
 
 /* victory popup */
 .centerpopup {
+    z-index: 5;
     pointer-events: none;
     text-align: center;
     align-items: center;
@@ -141,4 +144,24 @@ body {
 .centerpopup .hide {
  visibility: hidden;
  pointer-events: none;
+}
+
+.saveload {
+    width: 100%;
+    margin-top: 65px;
+}
+
+.SLButton {
+    width: 150px;
+    height: 75px;
+    background-color: crimson;
+    margin: 0px 25px 0px 25px;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: all ease-in-out 0.1s;
+}
+
+.SLButton:active {
+    scale: 1.15;
 }

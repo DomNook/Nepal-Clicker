@@ -179,6 +179,11 @@ setInterval(function() {
     document.title = cash + " Money | Nepal Clicker"
 }, 1000); // 1000 = 1 sec
 
+// autosave
+setInterval(function() {
+    SaveGame()
+}, 30000); // 30000 = 30 sec
+
 //display cps
 
 var cashpersecond = 0;
@@ -200,3 +205,77 @@ function FreePlay() {
     var freeplaypopup = document.getElementById("win");
     freeplaypopup.classList.toggle("show");
 }
+
+//saving
+
+function SaveGame() {
+    var GameSave = {
+        cash: cash,
+        clickpower: clickpower,
+        hardupgradecost: hardupgradecost,
+        wifi: wifi,
+        wificost: wificost,
+        trade: trade,
+        tradecost: tradecost,
+        laptop: laptop,
+        laptopcost: laptopcost,
+        telemed: telemed,
+        telemedcost: telemedcost,
+        envsur: envsur,
+        envsurcost: envsurcost,
+        bigman: bigman,
+        bigmancost: bigmancost
+    };
+    localStorage.setItem("GameSave", JSON.stringify(GameSave));
+}
+
+//loading
+
+function LoadGame() {
+    var SavedGame= JSON.parse(localStorage.getItem(GameSave));
+    if (typeof SavedGame.cash !== "undefined") cash = SavedGame.cash;
+    if (typeof SavedGame.clickpower !== "undefined") clickpower = SavedGame.clickpower;
+    if (typeof SavedGame.hardupgradecost !== "undefined") hardupgradecost = SavedGame.hardupgradecost;
+    if (typeof SavedGame.wifi !== "undefined") wifi = SavedGame.wifi;
+    if (typeof SavedGame.wificost !== "undefined") wificost = SavedGame.wificost;
+    if (typeof SavedGame.trade !== "undefined") trade = SavedGame.trade;
+    if (typeof SavedGame.tradecost !== "undefined") tradecost = SavedGame.tradecost;
+    if (typeof SavedGame.laptop !== "undefined") laptop = SavedGame.laptop;
+    if (typeof SavedGame.laptopcost !== "undefined") laptopcost = SavedGame.laptopcost;
+    if (typeof SavedGame.telemed !== "undefined") telemed = SavedGame.telemed;
+    if (typeof SavedGame.telemedcost !== "undefined") telemedcost = SavedGame.telemedcost;
+    if (typeof SavedGame.envsur !== "undefined") envsur = SavedGame.envsur;
+    if (typeof SavedGame.envsurcost !== "undefined") envsurcost = SavedGame.envsurcost;
+    if (typeof SavedGame.bigman !== "undefined") bigman = SavedGame.bigman;
+    if (typeof SavedGame.bigmancost !== "undefined") bigmancost = SavedGame.bigmancost;
+
+    cashpersec()
+    document.getElementById("hardcost").innerHTML = hardupgradecost;
+    document.getElementById("clickindicator").innerHTML = clickpower;
+    document.getElementById("wifi").innerHTML = wifi;
+    document.getElementById("wificost").innerHTML = wificost;
+    document.getElementById("trade").innerHTML = trade;
+    document.getElementById("tradecost").innerHTML = tradecost;
+    document.getElementById("laptop").innerHTML = laptop;
+    document.getElementById("laptopcost").innerHTML = laptopcost;
+    document.getElementById("telemed").innerHTML = telemed;
+    document.getElementById("telemedcost").innerHTML = telemedcost;
+    document.getElementById("envsur").innerHTML = envsur;
+    document.getElementById("envsurcost").innerHTML = envsurcost;
+    document.getElementById("bigman").innerHTML = bigman;
+    document.getElementById("bigmancost").innerHTML = bigmancost;
+}
+
+// reset game
+
+function ResetGame() {
+    if (confirm("Are you sure you want to reset your game? This will delete all your progress")) {
+        var GameSave = {};
+        localStorage.setItem("GameSave", JSON.stringify(GameSave))
+        location.reload();
+    }
+}
+
+// autoload on start
+
+window.onload = LoadGame();
