@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-    background-color: darkcyan;
+    background-color: rgb(9, 100, 165);
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
 
+.titlediv {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
 #moneybutton {
     border: none;
-    background-color: darkcyan;
+    background-color: rgb(9, 100, 165);
 }
 
 #rupee {
@@ -24,14 +30,27 @@ body {
 }
 
 #buybutton {
-    background-color: cornflowerblue;
+    background-color: rgb(106, 153, 0);
     color: black;
     cursor: pointer;
+    float: right;
+    height: 45px;
+    border-radius: 20px;
+    width: 65px;
+    margin-left: 10px;
 }
 
 .worker {
     float: right;
-    margin: 0px;
+    background-color: rgba(109, 49, 7, 0.4);
+    height: 45px;
+    border-radius: 20px;
+    line-height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid;
+    border-width: 2px;
+    margin: 4px;
 }
 
 .workercontainer {
@@ -48,6 +67,18 @@ body {
 .upgrades {
     margin-left: 20px;
     float: left;
+}
+
+.upgrade {
+    float: left;
+    background-color: rgba(109, 49, 7, 0.4);
+    height: 45px;
+    border-radius: 20px;
+    line-height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid;
+    border-width: 2px;
 }
 
 /* victory popup */
