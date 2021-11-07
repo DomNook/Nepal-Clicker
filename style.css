@@ -22,7 +22,17 @@ body {
     height: 100px;
     width: 100px;
     cursor: pointer;
+    position: relative;
 }
+
+#rupee:hover {
+    transform: scale(1.25);
+}
+
+#rupee:active {
+    transform: scale(1.15);
+}
+
 
 .center {
     text-align: center;
