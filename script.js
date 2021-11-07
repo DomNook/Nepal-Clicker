@@ -176,6 +176,7 @@ function buyBigman() {
 setInterval(function() {
     cash = cash + wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100);
     document.getElementById("money").innerHTML = cash;
+    document.title = cash + " Money | Nepal Clicker"
 }, 1000); // 1000 = 1 sec
 
 //display cps
