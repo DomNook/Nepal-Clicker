@@ -23,6 +23,7 @@ body {
     width: 100px;
     cursor: pointer;
     position: relative;
+    transition: ease-in-out, 0.1s;
 }
 
 #rupee:hover {
