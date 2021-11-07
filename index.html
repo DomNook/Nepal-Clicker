@@ -9,12 +9,14 @@
 
 
     <body>
+        <!--Winning popup-->
         <div class="centerpopup">
             <div class="victory" id="win">
                 Congratulations on providing the nepali citizens with internet access and changing the lives of thousands of nepali villagers!<br>You have recieved the Magsaysay award for your work and are praised worldwide.<br>
                 <button class="freeplaybutton" onclick="FreePlay()">Shut up<br>and let me play</button>
             </div>
         </div>
+        <!--Winning popup end-->
         <div class="center">
             <center>
                 <div class="titlediv">
@@ -31,10 +33,10 @@
         </div>
         <br><br><br><br>
         <div class="purchasecontainer">
-            <div class="upgrades">
+            <div class="upgrades unselectable">
                 <p class="upgrade">Upgrade hardware | Cost: [<span id="hardcost"></span>] <button onclick="upgradehard()" id="buybutton">Buy</button></p>
             </div>
-            <div class="workercontainer">
+            <div class="workercontainer unselectable">
                 <p class="worker">You currently own <span id="wifi"></span> Wi-Fi Antennas | Cost: [<span id="wificost"></span>] <button onclick="buyWifi()" id="buybutton">Buy</button></p>
                 <p class="worker">You currently own <span id="trade"></span> Trading websites | Cost: [<span id="tradecost"></span>] <button onclick="buyTrade()" id="buybutton">Buy</button></p>
                 <p class="worker">You currently own <span id="laptop"></span> Laptops for Children | Cost: [<span id="laptopcost"></span>] <button onclick="buyLaptop()" id="buybutton">Buy</button></p>
