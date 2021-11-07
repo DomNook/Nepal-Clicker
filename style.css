@@ -49,6 +49,11 @@ body {
     border-radius: 20px;
     width: 65px;
     margin-left: 10px;
+    transition: ease-in-out, 0.1s;
+}
+
+#buybutton:active {
+    transform: scale(0.85);
 }
 
 .worker {
