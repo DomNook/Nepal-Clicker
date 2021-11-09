@@ -199,6 +199,7 @@ function cashpersec() {
 function Victory() {
     var freeplaypopup = document.getElementById("win");
     freeplaypopup.classList.toggle("show");
+    new Audio("./Nepal.mp3").play()
 }
 
 function FreePlay() {
