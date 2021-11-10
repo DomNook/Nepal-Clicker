@@ -169,12 +169,31 @@ function buyBigman() {
     }
 }
 
+//upgrades
+var fakedocscost = 50000;
+var fakedocs = 1;
+
+document.getElementById("fakedocscost").innerHTML = fakedocscost;
+
+function buyFakedocuments() {
+    if (cash >= fakedocscost) {
+        cash = cash - fakedocscost;
+        fakedocs = 2;
+
+        document.getElementById("money").innerHTML = cash;
+        cashpersec();
+
+        var docsvisibility = document.getElementById("docsupgrade");
+        docsvisibility.classList.toggle("hide");
+    };
+}
+
 
 // cash per second calculations
 
 
 setInterval(function() {
-    cash = cash + wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100);
+    cash = cash + (wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100)) * fakedocs;
     document.getElementById("money").innerHTML = cash;
     document.title = cash + " Money | Nepal Clicker"
 }, 1000); // 1000 = 1 sec
@@ -190,7 +209,7 @@ var cashpersecond = 0;
 document.getElementById("cashpsec").innerHTML = cashpersecond;
 
 function cashpersec() {
-    cashpersecond = wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100);
+    cashpersecond = (wifi + (trade * 2) + (laptop * 5) + (telemed * 12) + (envsur * 35) + (bigman * 100)) * fakedocs;
     document.getElementById("cashpsec").innerHTML = cashpersecond;
 }
 

@@ -81,21 +81,28 @@ body {
     flex-direction: column;
     float: right;
     margin-right: 20px;
+    width: 50%;
 }
 
 .purchasecontainer {
     width: 100%;
-    display: inline-block;
+    display: flex;
 }
 
 .upgrades {
     margin-left: 20px;
     float: left;
     display: flex;
+    height: 342px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.docshider {
+    visibility: visible;
 }
 
 .upgrade {
-    float: left;
     background-color: rgba(109, 49, 7, 0.4);
     height: 45px;
     border-radius: 20px;
@@ -104,6 +111,34 @@ body {
     padding-right: 5px;
     border: solid;
     border-width: 2px;
+    margin: 4px;
+    float: left;
+    width: 80%;
+}
+
+/* upgrades */
+.docsupgrade {
+    background-color: rgba(109, 49, 7, 0.4);
+    height: 45px;
+    border-radius: 20px;
+    line-height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid;
+    border-width: 2px;
+    margin: 4px;
+    width: 80%;
+    float: left;
+}
+
+.docshider .show {
+    visibility: visible;
+    pointer-events: all;
+}
+
+.docshider .hide {
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /* victory popup */
