@@ -244,7 +244,8 @@ function SaveGame() {
         envsur: envsur,
         envsurcost: envsurcost,
         bigman: bigman,
-        bigmancost: bigmancost
+        bigmancost: bigmancost,
+        fakedocs: fakedocs
     };
     localStorage.setItem("GameSave", JSON.stringify(GameSave));
 }
@@ -268,6 +269,7 @@ function LoadGame() {
     if (typeof SavedGame.envsurcost !== "undefined") envsurcost = SavedGame.envsurcost;
     if (typeof SavedGame.bigman !== "undefined") bigman = SavedGame.bigman;
     if (typeof SavedGame.bigmancost !== "undefined") bigmancost = SavedGame.bigmancost;
+    if (typeof SavedGame.fakedocs !== "undefined") fakedocs = SavedGame.fakedocs;
 
     cashpersec()
     document.getElementById("hardcost").innerHTML = hardupgradecost;
@@ -284,6 +286,13 @@ function LoadGame() {
     document.getElementById("envsurcost").innerHTML = envsurcost;
     document.getElementById("bigman").innerHTML = bigman;
     document.getElementById("bigmancost").innerHTML = bigmancost;
+
+    if (fakedocs = 2) {
+        var docsvisibility = document.getElementById("docsupgrade");
+        docsvisibility.classList.toggle("hide");
+    }
+
+
 }
 
 // reset game
